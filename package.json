@@ -1,0 +1,12 @@
+{
+  "name": "todo-week10",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Mokagbue/todo-week10.git",
+  "author": "Michelle Okagbue <umbralcompendium@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "jquery": "^3.6.4"
+  }
+}
