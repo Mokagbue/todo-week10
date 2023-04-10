@@ -5,14 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo</title>
     <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://cdn-icons-png.flaticon.com/512/10284/10284433.png"
+    />
+    <link
       rel="stylesheet"
       href="node_modules/bootstrap/dist/css/bootstrap.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body class="container">
-    <div class="card">
-      <div class="card-body">
-        <div class="row">
+  <body class="bg-info">
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <div class="m-2">
+          <a
+            target="_blank"
+            href="https://www.flaticon.com"
+            title="rainbow icons"
+            class="logo-img"
+            ><img
+              src="https://cdn-icons-png.flaticon.com/512/10284/10284433.png"
+              width="35"
+          /></a>
+        </div>
+
+        <a class="navbar-brand" href="#">TODO</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div
+        class="d-flex justify-content-center flex-column col-sm-2 mx-auto mt-3"
+      >
+        <h1
+          class="border-bottom text-white d-flex justify-content-center"
+          style="font-family: 'Permanent Marker', cursive"
+        >
+          TODO
+        </h1>
+        <p
+          class="text-white d-flex justify-content-center"
+          style="font-family: 'Permanent Marker', cursive"
+        >
+          or not to do
+        </p>
+      </div>
+      <div class="card m-3">
+        <div class="card-body">
+          <div class="row">
             <div class="col-sm">
               <div class="form-group">
                 <label for="new-task">Task</label>
@@ -25,37 +88,26 @@
               </div>
             </div>
           </div>
-        <div class="row d-flex justify-content-center">
-          <div class="col-sm-3">
-            <div class="form-group">
-              <label for="new-start-date">Start Date</label>
-              <input type="date" class="form-control" id="new-start-date" />
-            </div>
+          <div class="m-3 col-sm-3">
+            <button
+              id="add"
+              class="btn btn-dark form-control d-flex justify-content-center"
+              style="font-family: 'Permanent Marker', cursive"
+            >
+              Add A New Task
+            </button>
           </div>
-          <div class="col-sm-3">
-            <div class="form-group">
-              <label for="new-end-date">End Date</label>
-              <input type="date" class="form-control" id="new-end-date" />
-            </div>
-          </div>
-        </div>
-        
-        <div>
-          <button id="add" class="btn btn-success form-control">
-            Add New Task
-          </button>
         </div>
       </div>
+      <table id="list" class="table table-dark table-striped table-hover">
+        <tr>
+          <th>Task</th>
+          <th>Date Created</th>
+          <th>Actions</th>
+        </tr>
+      </table>
     </div>
-    <table id="list" class="table table-dark table-striped table-hover">
-      <tr>
-        <th>Task</th>
-        <th>Date Created</th>
-        <th>Start Date</th>
-        <th>Due Date</th>
-        <th>Actions</th>
-      </tr>
-    </table>
+
     <script src="index.js"></script>
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
